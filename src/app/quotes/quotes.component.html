@@ -5,6 +5,15 @@
         <li *ngFor='let quote of quotes'>
             {{quote.id}}
           {{quote.name}}
+          {{quote.title}}
+          {{quote.quote}}
+          {{quote.author}}
+          {{quote.datePosted}}
+          {{quote.likes}}
+          {{quote.dislike}}
         </li>
     </ul>
   </div>
+
+  public name:string, public title:string, public quote:string, public author:string,
+  public datePosted:Date, public likes: number,public dislike:number
