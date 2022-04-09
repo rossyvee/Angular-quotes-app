@@ -15,6 +15,6 @@ import { QuotesComponent } from './quotes/quotes.component';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, QuotesComponent]
 })
 export class AppModule { }
