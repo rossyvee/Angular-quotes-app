@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Quote } from '../quote';
 
 @Component({
@@ -21,6 +22,24 @@ quotes: Quote[]=[
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  quoteForm = new FormGroup({
+    name: new FormControl(''),
+    title: new FormControl(''),
+    quote: new FormControl(''),
+    author: new FormControl(''),
+  });
+
+  saveQuote():void{
+    const formValues = this.quoteForm.value
+    const quote = new Quote(this.quotes.length+2,formValues.name, formValues.title, formValues.quote, formValues.author, new Date(),0,0)
+    console.log(formValues)
+    this.quotes.unshift(quote)
+  }
+
+  deleteQuote(quoteId:number):void{
+    this.quotes = this.quotes.filter(quote=>quote.id!=quoteId)
   }
 
 }
