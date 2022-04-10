@@ -1,32 +1,73 @@
-<div>
+<div class="row">
+  <div class="col-md-6 mt-5">
+    <h1>Quotes Form</h1>
+    <div class="container-fluid">
+      <h2 class="heading">Add Quote</h2>
+      <form [formGroup]="quoteForm" (ngSubmit)="saveQuote()">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" required class="form-control" id="name" formControlName="name" minlength="3" />
+        </div>
+
+        <div class="form-group">
+          <label for="name">Quote Tittle</label>
+          <input type="text" required class="form-control" id="title" formControlName="title" name="title" />
+        </div>
+
+        <div class="form-group">
+          <label for="description">Quote</label>
+          <textarea class="form-control" id="quote" rows="2" required name="quote" formControlName="quote"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Quote Author</label>
+          <input type="text" required class="form-control" id="author" name="author" formControlName="author" />
+        </div>
+
+        <button type="submit" [disabled]="!quoteForm.valid" class="btn btn-sm btn-success">
+          Add Quote
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-md-6 mt-5">
     <h1>My Quotes</h1>
-    <hr>
-    <ul *ngFor='let quote of quotes'>
-      <div *ngIf = 'quote.id ==1; then highlight else empty'></div>
+    <hr />
+    <ul *ngFor="let quote of quotes">
+      <div *ngIf="quote.likes  > 0; then highlight; else empty"></div>
       <ng-template #highlight>
         <li appHighlight>
-          <!-- <span>{{quote.id}}</span>  -->
-         <span>{{quote.name}}</span>
-         <span>{{quote.title}}</span>
-         <span>{{quote.quote}}</span>
-         <span>{{quote.author}}</span>
-         <span>{{quote.datePosted}}</span>
-         <span class="btn btn-sm btn-primary ml-3"> Upvotes{{quote.likes}}</span>
-         <span class="btn btn-sm btn-danger ml-3"> Downvotes{{quote.dislike}}</span>
-       </li>
+          <span>{{ quote.name }}</span>
+          <span>{{ quote.title }}</span>
+          <span>{{ quote.quote }}</span>
+          <span>{{ quote.author }}</span>
+          <span>{{ quote.datePosted }}</span>
+          <span class="btn btn-sm btn-primary ml-3">
+            Upvotes{{ quote.likes }}</span>
+          <span class="btn btn-sm btn-info ml-3">
+            Downvotes{{ quote.dislike }}</span>
+
+          <span (click)="deleteQuote(quote.id)" class="btn btn-sm btn-danger ml-3">
+            Delete Quote</span>
+        </li>
       </ng-template>
       <ng-template #empty>
         <li>
-          <!-- <span>{{quote.id}}</span>  -->
-         <span>{{quote.name}}</span>
-         <span>{{quote.title}}</span>
-         <span>{{quote.quote}}</span>
-         <span>{{quote.author}}</span>
-         <span>{{quote.datePosted}}</span>
-         <span class=" btn btn-sm btn-primary ml-3"> Upvotes{{quote.likes}}</span>
-         <span class=" btn btn-sm btn-danger ml-3"> Downvotes{{quote.dislike}}</span>
-       </li>
+          <span>{{ quote.name }}</span>
+          <span>{{ quote.title }}</span>
+          <span>{{ quote.quote }}</span>
+          <span>{{ quote.author }}</span>
+          <span>{{ quote.datePosted }}</span>
+          <span class="btn btn-sm btn-primary ml-3">
+            Upvotes{{ quote.likes }}</span>
+          <span class="btn btn-sm btn-info ml-3">
+            Downvotes{{ quote.dislike }}</span>
+
+            <span (click)="deleteQuote(quote.id)" class="btn btn-sm btn-danger ml-3">
+              Delete Quote</span>
+        </li>
       </ng-template>
- 
     </ul>
   </div>
+</div>
