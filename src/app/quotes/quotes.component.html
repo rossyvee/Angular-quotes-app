@@ -2,19 +2,31 @@
     <h1>My Quotes</h1>
     <hr>
     <ul *ngFor='let quote of quotes'>
-      <div class="div"> *ngIf='quote.id==1; then highlight else empty'</div>
-      <ng-template>
-        
-      </ng-template>
+      <div *ngIf = 'quote.id ==1; then highlight else empty'></div>
+      <ng-template #highlight>
         <li appHighlight>
-           <span>{{quote.id}}</span> 
-          <span>{{quote.name}}</span>
-          <span>{{quote.title}}</span>
-          <span>{{quote.quote}}</span>
-          <span>{{quote.author}}</span>
-          <span>{{quote.datePosted}}</span>
-          <span class="btn-primary ml-3"> Upvotes{{quote.likes}}</span>
-          <span class="btn-danger ml-3"> Downvotes{{quote.dislike}}</span>
-        </li>
+          <!-- <span>{{quote.id}}</span>  -->
+         <span>{{quote.name}}</span>
+         <span>{{quote.title}}</span>
+         <span>{{quote.quote}}</span>
+         <span>{{quote.author}}</span>
+         <span>{{quote.datePosted}}</span>
+         <span class="btn-primary ml-3"> Upvotes{{quote.likes}}</span>
+         <span class="btn-danger ml-3"> Downvotes{{quote.dislike}}</span>
+       </li>
+      </ng-template>
+      <ng-template #empty>
+        <li>
+          <!-- <span>{{quote.id}}</span>  -->
+         <span>{{quote.name}}</span>
+         <span>{{quote.title}}</span>
+         <span>{{quote.quote}}</span>
+         <span>{{quote.author}}</span>
+         <span>{{quote.datePosted}}</span>
+         <span class="btn-primary ml-3"> Upvotes{{quote.likes}}</span>
+         <span class="btn-danger ml-3"> Downvotes{{quote.dislike}}</span>
+       </li>
+      </ng-template>
+ 
     </ul>
   </div>
