@@ -2,6 +2,10 @@
     <h1>My Quotes</h1>
     <hr>
     <ul *ngFor='let quote of quotes'>
+      <div class="div"> *ngIf='quote.id==1; then highlight else empty'</div>
+      <ng-template>
+        
+      </ng-template>
         <li appHighlight>
            <span>{{quote.id}}</span> 
           <span>{{quote.name}}</span>
