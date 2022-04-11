@@ -67,7 +67,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-## Authors Info and conributions
+## Authors Info and contributions
 For any comments,suggestions,feedback or inquiries, contact me via email or LinkedIn
 and make contributions to the code
 
