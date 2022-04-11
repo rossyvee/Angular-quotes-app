@@ -15,18 +15,21 @@ Quotes App is an Angular application that allows users to add quotes,delete quot
  ![Screenshot] (<img src="screenshot img/Screenshot from 2022-03-21 00-18-35.png">)
 
 ## Technology Used
-* HTML
+* Angular CLI
+* Typescript
+* HTML5
 * CSS
-* jQuery
-* Bootstrap
+* JavaScript
+* Node
+* Bootsrap
+* FontAwesome
 
 ## Requirements
 * A good internet connection
 ## set up instruction and installation
- clone this repository to a folder git@github.com:rossyvee/Week4IP-BeyondPizaa.git
- Extract the cloned file
- Open terminal command line then navigate to the folder of the application. cd BEYONDPIZZA
- open index.html on your web browser
+ Clone or download and unzip the repository from https://github.com/rossyvee/Angular-quotes-app
+If you have git Use this command git clone * to clone the project.
+Run ng serve from your terminal
 
 
 ## Behaviour Drive and DEvelopment
@@ -41,9 +44,11 @@ Upvote increases by +1 on each click
 User clicks Downvote
 Downvote decreases by -1 on each click
 [live-link](https://github.com/rossyvee/Angular-quotes-app)
+## Known Bugs
+* There are no known bugs currently. The page works as expected
 ## Reference
   ### The reference materials used in this project can be accessed though this link
-  * [Resource](https://moringaschool.instructure.com/courses/586/assignments/9284?confetti=true&submitted=0)
+  * [Resource](https://moringaschool.instructure.com/courses/618/assignments/9618)
   ## Licence
 MIT License
 Copyright (c) [2022] [Roseline Akinyi]
@@ -62,7 +67,10 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-## Authors Info
+## Authors Info and conributions
+For any comments,suggestions,feedback or inquiries, contact me via email or LinkedIn
+and make contributions to the code
+
 Slack Profile - Rose Akinyi.
 
 LinkedIn - (Roseline Akinyi: https://www.linkedin.com/in/roseline-akinyi-065875895/)
