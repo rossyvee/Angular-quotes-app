@@ -43,10 +43,10 @@
           <span>{{ quote.quote }}</span>
           <span>{{ quote.author }}</span>
           <span>{{ quote.datePosted }}</span>
-          <span class="btn btn-sm btn-primary ml-3">
-            Upvotes{{ quote.likes }}</span>
-          <span class="btn btn-sm btn-info ml-3">
-            Downvotes{{ quote.dislike }}</span>
+          <span  (click)="processVotes(quote.id,'increase')" class="btn btn-sm btn-primary ml-3">
+            Upvotes <em>{{ quote.likes }}</em></span>
+          <span (click)="processVotes(quote.id,'decrease')" class="btn btn-sm btn-info ml-3">
+            Downvotes {{ quote.dislike }}</span>
 
           <span (click)="deleteQuote(quote.id)" class="btn btn-sm btn-danger ml-3">
             Delete Quote</span>
@@ -59,13 +59,13 @@
           <span>{{ quote.quote }}</span>
           <span>{{ quote.author }}</span>
           <span>{{ quote.datePosted }}</span>
-          <span class="btn btn-sm btn-primary ml-3">
-            Upvotes{{ quote.likes }}</span>
-          <span class="btn btn-sm btn-info ml-3">
-            Downvotes{{ quote.dislike }}</span>
+          <span  (click)="processVotes(quote.id,'increase')" class="btn btn-sm btn-primary ml-3">
+            Upvotes <em>{{ quote.likes }}</em></span>
+          <span (click)="processVotes(quote.id,'decrease')" class="btn btn-sm btn-info ml-3">
+            Downvotes {{ quote.dislike }}</span>
 
-            <span (click)="deleteQuote(quote.id)" class="btn btn-sm btn-danger ml-3">
-              Delete Quote</span>
+          <span (click)="deleteQuote(quote.id)" class="btn btn-sm btn-danger ml-3">
+            Delete Quote</span>
         </li>
       </ng-template>
     </ul>

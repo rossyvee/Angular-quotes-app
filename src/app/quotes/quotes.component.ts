@@ -41,5 +41,23 @@ quotes: Quote[]=[
   deleteQuote(quoteId:number):void{
     this.quotes = this.quotes.filter(quote=>quote.id!=quoteId)
   }
+  processVotes(quoteId:number, action:string):void {
+    let q:Quote[] =this.quotes.map(function(param:Quote){
+      if(param.id==quoteId){
+        if(action == "increase"){
+          param.likes+=1
+        }
+        if(action == "decrease"){
+          param.dislike+=1
+        }
+      }
+      return param
+    })
+
+    console.log(q);
+    
+
+    this.quotes = q
+  }
 
 }
