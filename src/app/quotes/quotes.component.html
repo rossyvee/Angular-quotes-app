@@ -38,8 +38,8 @@
       <div *ngIf="quote.likes  > 0; then highlight; else empty"></div>
       <ng-template #highlight>
         <li appHighlight>
-          <span>{{ quote.name }}</span>
-          <span>{{ quote.title }}</span>
+         <p> <span>{{ quote.name }}</span> </p>
+         <p> <span>{{ quote.title }}</span> </p>
           <span>{{ quote.quote }}</span>
           <span>{{ quote.author }}</span>
           <span>{{ quote.datePosted }}</span>
@@ -54,11 +54,11 @@
       </ng-template>
       <ng-template #empty>
         <li>
-          <span>{{ quote.name }}</span>
-          <span>{{ quote.title }}</span>
-          <span>{{ quote.quote }}</span>
-          <span>{{ quote.author }}</span>
-          <span>{{ quote.datePosted }}</span>
+         <p> Contributed By: <span>{{ quote.name }}</span> </p>
+         <p>Title: <span>{{ quote.title }}</span> </p>
+         <p> <span class="text-danger">{{ quote.quote }}</span> </p> 
+         <p> Author: <span>{{ quote.author }}</span> </p> 
+          <p>Date Posted: <span>{{ quote.datePosted|date }}</span> </p> 
           <span  (click)="processVotes(quote.id,'increase')" class="btn btn-sm btn-primary ml-3">
             Upvotes <em>{{ quote.likes }}</em></span>
           <span (click)="processVotes(quote.id,'decrease')" class="btn btn-sm btn-info ml-3">
